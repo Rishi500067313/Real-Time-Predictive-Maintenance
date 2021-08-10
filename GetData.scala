@@ -9,7 +9,7 @@ import scala.concurrent.ExecutionContext.Implicits.global
 val namespaceName = "azuretrial"
 val eventHubName = "final"
 val sasKeyName = "root"
-val sasKey = "ryNdDPw2AaX8BvMYjyAWZMUQV8z+bh1W4SEkKaLuRQg="
+val sasKey = "<Primary Key>"
 val connStr = new ConnectionStringBuilder()
             .setNamespaceName(namespaceName)
             .setEventHubName(eventHubName)
