@@ -14,9 +14,7 @@ val connStr = new com.microsoft.azure.eventhubs.ConnectionStringBuilder()
             .setSasKeyName(sasKeyName)
             .setSasKey(sasKey)
 
-val customEventhubParameters =
-  EventHubsConf(connStr.toString())
-  .setMaxEventsPerTrigger(50)
+val customEventhubParameters = EventHubsConf(connStr.toString()).setMaxEventsPerTrigger(50)
 
 val incomingStream = spark.readStream.format("eventhubs").options(customEventhubParameters.toMap).load()
 
